@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Scenic Route with Andrew — Smokies Guide</title>
+  <meta name="description" content="The Scenic Route with Andrew — a curated Smoky Mountains guide for eats, attractions, shopping, moonshine, and outdoor adventures.">
+  <link rel="preconnect" href="https://source.unsplash.com">
+  <style>
+:root{
+  --bg:#0e1310;
+  --panel:#121a14;
+  --card:#182219;
+  --card-2:#1d2a20;
+  --text:#eef3ed;
+  --muted:#b7c6b4;
+  --accent:#83c39e;
+  --border:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(0deg,#0c110d,#0e1310);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.hero{
+  background:
+    radial-gradient(1000px 400px at 10% -10%, rgba(131,195,158,.25), transparent),
+    url('https://source.unsplash.com/1600x700/?great+smoky+mountains,forest,overlook') center/cover no-repeat;
+  border-bottom:1px solid var(--border);
+}
+.hero .scrim{background:rgba(0,0,0,.45)}
+.hero-inner{padding:58px 16px}
+.hero h1{margin:0 0 6px;font-size:2.2rem;letter-spacing:.3px;text-shadow:0 1px 16px rgba(0,0,0,.35)}
+.hero p{margin:0;color:#e2efe7;max-width:900px}
+.badges{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.06);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:.85rem;color:#e6efe9}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.cta a{
+  border:1px solid var(--border);background:linear-gradient(180deg,var(--card),var(--panel));
+  padding:10px 14px;border-radius:10px;color:var(--text);font-weight:600
+}
+nav.sticky{position:sticky;top:0;z-index:20;background:rgba(14,19,16,.75);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border)}
+nav .inner{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;padding:10px 16px}
+nav a{padding:8px 12px;border-radius:10px;color:#e8f2ec}
+nav a:hover{background:rgba(255,255,255,.07)}
+.tipbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px}
+.tipbar .left{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tipbar .pill{background:rgba(255,255,255,.07);border:1px solid var(--border);padding:8px 12px;border-radius:999px}
+.tipbar .venmo{
+  background:linear-gradient(180deg,#244d36,#1a3827);
+  border:1px solid #3f6a52;padding:10px 14px;border-radius:12px;font-weight:700;color:#eaf7f0
+}
+section{margin-top:28px}
+section>h1{font-size:1.5rem;margin:8px 6px 12px}
+h2{margin:16px 8px;font-size:1.25rem;color:#d9e7dd}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;padding:8px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card-2));
+  border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:100%;
+  box-shadow:0 10px 28px rgba(0,0,0,.25)
+}
+.card img{width:100%;height:165px;object-fit:cover;background:#0a0f0b}
+.card .body{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:1.05rem}
+.meta{color:var(--muted);font-size:.85rem}
+.card p{margin:0;color:#e5efe8;font-size:.95rem;line-height:1.35}
+.actions{display:flex;gap:10px;margin-top:6px}
+.actions a{
+  font-size:.9rem;padding:6px 10px;border-radius:8px;text-decoration:none;color:#ebf6f0;
+  background:linear-gradient(180deg,#263829,#1b281e);border:1px solid #2d4a36
+}
+footer{margin:40px 0 20px;color:#bcd0c1;text-align:center;font-size:.9rem}
+footer a{color:#cde7d7}
+</style>
+</head>
+<body>
+  
+<header class="hero">
+  <div class="scrim">
+    <div class="hero-inner container">
+      <h1>The Scenic Route with Andrew</h1>
+      <p>Your quick, mobile‑friendly guide to the best <strong>eats</strong>, <strong>attractions</strong>, <strong>shopping</strong>, <strong>moonshine</strong>, and <strong>outdoor</strong> adventures across Gatlinburg, Pigeon Forge, Sevierville, and the Smokies.</p>
+      <div class="badges">
+        <span class="badge">Local picks</span>
+        <span class="badge">One‑tap directions</span>
+        <span class="badge">Updated favorites</span>
+      </div>
+      <div class="tipbar">
+        <div class="left">
+          <span class="pill">Enjoyed the ride or these tips?</span>
+        </div>
+        <a id="venmoLink" class="venmo" href="https://venmo.com/u/YOUR-VENMO-USERNAME" target="_blank" rel="noopener">Tip Andrew on Venmo</a>
+      </div>
+      <div class="cta">
+        <a href="#restaurants">Restaurants</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#shopping">Shopping</a>
+        <a href="#moonshine">Moonshine</a>
+        <a href="#outdoors">Outdoors</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+<nav class="sticky">
+  <div class="inner">
+    <a href="#restaurants">Restaurants</a>
+    <a href="#attractions">Attractions</a>
+    <a href="#shopping">Shopping</a>
+    <a href="#moonshine">Moonshine</a>
+    <a href="#outdoors">Outdoors</a>
+    <a href="#top">Back to top</a>
+  </div>
+</nav>
+
+  <main class="container">
+    <section id='restaurants'><h1>Restaurants</h1><h2 id='rest-gatlinburg'>Gatlinburg</h2><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?seafood,raw bar,gatlinburg,restaurant" alt="Chesapeake’s Seafood and Raw Bar photo" loading="lazy">
+      <div class="body">
+        <h3>Chesapeake’s Seafood and Raw Bar</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Fresh seafood & raw bar with mountain-chic vibes.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Chesapeake’s+Seafood+and+Raw+Bar+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?sandwich,deli,breakfast,gatlinburg" alt="Tennessee Jed’s photo" loading="lazy">
+      <div class="body">
+        <h3>Tennessee Jed’s</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Casual, piled-high sandwiches and hearty breakfasts.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Tennessee+Jed’s+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?pancakes,breakfast,brunch" alt="Pancake Pantry photo" loading="lazy">
+      <div class="body">
+        <h3>Pancake Pantry</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Iconic pancakes since 1960—expect a line worth waiting.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Pancake+Pantry+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?fine dining,steak,lodge,romantic" alt="The Greenbrier photo" loading="lazy">
+      <div class="body">
+        <h3>The Greenbrier</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Lodge-style fine dining, steaks & craft cocktails.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Greenbrier+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?steakhouse,river,restaurant" alt="The Peddler photo" loading="lazy">
+      <div class="body">
+        <h3>The Peddler</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Local-favorite steakhouse beside the river.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Peddler+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?pub,beer,celtic,comfort food" alt="Boudicca’s Celtic Pub photo" loading="lazy">
+      <div class="body">
+        <h3>Boudicca’s Celtic Pub</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Cozy Celtic pub for pies, pasties, and pints.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Boudicca’s+Celtic+Pub+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?brewery,craft beer,pizza" alt="Gatlinburg Brewing Company photo" loading="lazy">
+      <div class="body">
+        <h3>Gatlinburg Brewing Company</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>House beers & wood‑fired pizzas.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Gatlinburg+Brewing+Company+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?romantic,fine dining,wine" alt="The Heirloom Room photo" loading="lazy">
+      <div class="body">
+        <h3>The Heirloom Room</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Upscale, romantic dinner—refined plates in a quiet setting.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Heirloom+Room+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?comfort food,restaurant,tater tots" alt="Split Rail Eats photo" loading="lazy">
+      <div class="body">
+        <h3>Split Rail Eats</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Local hangout—handhelds, tots, and friendly service.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Split+Rail+Eats+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?pizza,all you can eat,brazilian" alt="Pizza Rio photo" loading="lazy">
+      <div class="body">
+        <h3>Pizza Rio</h3>
+        <div class='meta'>Gatlinburg</div>
+        <p>Brazilian rodízio‑style, all‑you‑can‑eat pizza.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Pizza+Rio+Gatlinburg" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div><h2 id='rest-pigeon-forge'>Pigeon Forge</h2><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?bakery,bread,cafe,pigeon forge" alt="Pottery House Cafe photo" loading="lazy">
+      <div class="body">
+        <h3>Pottery House Cafe</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Fresh‑baked breads; try the Chicken Reuben on handmade pottery.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Pottery+House+Cafe+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?bbq,whiskey,barbecue,restaurant" alt="Junction 35 photo" loading="lazy">
+      <div class="body">
+        <h3>Junction 35</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>BBQ & spirits with a lively, industrial vibe.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Junction+35+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?burger,american restaurant,pigeon forge" alt="Local Goat photo" loading="lazy">
+      <div class="body">
+        <h3>Local Goat</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Scratch kitchen, big burgers, and local art.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Local+Goat+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?old mill,southern food,comfort food" alt="The Old Mill photo" loading="lazy">
+      <div class="body">
+        <h3>The Old Mill</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Historic mill serving Southern comfort classics.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Old+Mill+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?country restaurant,apple,fritters" alt="Applewood Farmhouse Grill photo" loading="lazy">
+      <div class="body">
+        <h3>Applewood Farmhouse Grill</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Country favorites with signature apple fritters.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Applewood+Farmhouse+Grill+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?latin food,modern cuisine,restaurant" alt="Paloma Scratch Kitchen photo" loading="lazy">
+      <div class="body">
+        <h3>Paloma Scratch Kitchen</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Modern plates with a Latin twist.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Paloma+Scratch+Kitchen+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?coal fired pizza,pizzeria" alt="West by God Coalfired Pizza photo" loading="lazy">
+      <div class="body">
+        <h3>West by God Coalfired Pizza</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Crunchy, coal‑fired pies with blistered crusts.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=West+by+God+Coalfired+Pizza+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?sandwich,deli,pretzel" alt="Pigeon Forge Deli photo" loading="lazy">
+      <div class="body">
+        <h3>Pigeon Forge Deli</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Hidden‑gem sandwiches and fresh pretzels.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Pigeon+Forge+Deli+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?family style,southern,comfort food" alt="Mama’s Farmhouse photo" loading="lazy">
+      <div class="body">
+        <h3>Mama’s Farmhouse</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Family‑style Southern feast—come hungry.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Mama’s+Farmhouse+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?pizza,brazilian,all you can eat" alt="Pizza Rio Pigeon Forge photo" loading="lazy">
+      <div class="body">
+        <h3>Pizza Rio Pigeon Forge</h3>
+        <div class='meta'>Pigeon Forge</div>
+        <p>Rodízio‑style pizza feast for groups.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Pizza+Rio+Pigeon+Forge+Pigeon+Forge" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div><h2 id='rest-sevierville'>Sevierville</h2><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?seasonal cuisine,american bistro,sevierville" alt="Seasons 101 photo" loading="lazy">
+      <div class="body">
+        <h3>Seasons 101</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Seasonal American plates in a stylish downtown spot.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Seasons+101+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?appalachian cuisine,fine dining,sevierville" alt="The Appalachian photo" loading="lazy">
+      <div class="body">
+        <h3>The Appalachian</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Refined Appalachian cuisine, fire‑kissed and local.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Appalachian+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?steakhouse,casual dining,burger" alt="Holstons photo" loading="lazy">
+      <div class="body">
+        <h3>Holstons</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Casual steaks, burgers, and comfort plates.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Holstons+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?italian,pasta,ristorante" alt="Roma Table photo" loading="lazy">
+      <div class="body">
+        <h3>Roma Table</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Hearty Italian classics and generous portions.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Roma+Table+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?italian,ristorante,wine" alt="Ristorante DellaSantina photo" loading="lazy">
+      <div class="body">
+        <h3>Ristorante DellaSantina</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Cozy Italian ristorante focused on tradition.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Ristorante+DellaSantina+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?brewery,craft beer,gastropub,sevierville" alt="Iron Forge Brewing Company photo" loading="lazy">
+      <div class="body">
+        <h3>Iron Forge Brewing Company</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Spacious brewery with pub fare and patio.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Iron+Forge+Brewing+Company+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?diner,comfort food,local restaurant" alt="Chubbys Reataurant photo" loading="lazy">
+      <div class="body">
+        <h3>Chubbys Reataurant</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Local comfort‑food staple with friendly service.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Chubbys+Reataurant+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?breakfast,brunch,eggs,waffles" alt="Buffalo Breakfast Co photo" loading="lazy">
+      <div class="body">
+        <h3>Buffalo Breakfast Co</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Big Southern breakfasts—shareable plates.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Buffalo+Breakfast+Co+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?arcade,bar food,retro" alt="The Pines Downtown photo" loading="lazy">
+      <div class="body">
+        <h3>The Pines Downtown</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Retro games, bites, and hangout vibes.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Pines+Downtown+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?smash burger,burger joint,sevierville" alt="Graze Burgers photo" loading="lazy">
+      <div class="body">
+        <h3>Graze Burgers</h3>
+        <div class='meta'>Sevierville</div>
+        <p>Smash burgers with creative toppings.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Graze+Burgers+Sevierville" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div></section>
+    <section id='attractions'><h1>Must‑Visit Attractions</h1><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?dollywood,roller coaster,theme park" alt="Dollywood Parks and Resorts photo" loading="lazy">
+      <div class="body">
+        <h3>Dollywood Parks and Resorts</h3>
+        
+        <p>Coasters, shows, artisan food—don’t miss Splash Country in summer.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Dollywood+Parks+and+Resorts+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?aquarium,penguin,underwater tunnel" alt="Ripleys Aquarium photo" loading="lazy">
+      <div class="body">
+        <h3>Ripleys Aquarium</h3>
+        
+        <p>Shark tunnel, penguins, hands‑on exhibits.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Ripleys+Aquarium+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?mountain village,skywalk,overlook" alt="Anakeesta photo" loading="lazy">
+      <div class="body">
+        <h3>Anakeesta</h3>
+        
+        <p>Mountaintop village, skywalks, and big views.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Anakeesta+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?ferris wheel,fountain,pigeon forge" alt="The Island photo" loading="lazy">
+      <div class="body">
+        <h3>The Island</h3>
+        
+        <p>Shops, dining, and the dancing fountain.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Island+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?museum,crime,exhibit" alt="Alcatraz Crime Museum photo" loading="lazy">
+      <div class="body">
+        <h3>Alcatraz Crime Museum</h3>
+        
+        <p>True‑crime artifacts and interactive exhibits.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Alcatraz+Crime+Museum+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?parrot,garden,tropical" alt="Parrot Mountain and Gardens photo" loading="lazy">
+      <div class="body">
+        <h3>Parrot Mountain and Gardens</h3>
+        
+        <p>Colorful birds in lush hillside gardens.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Parrot+Mountain+and+Gardens+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?thrill ride,drop tower,amusement" alt="The Mountain Monster photo" loading="lazy">
+      <div class="body">
+        <h3>The Mountain Monster</h3>
+        
+        <p>Triple‑threat thrill rides over Mountain Mile.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Mountain+Monster+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?zipline,forest,adventure" alt="Wahoo Zipline photo" loading="lazy">
+      <div class="body">
+        <h3>Wahoo Zipline</h3>
+        
+        <p>Tree‑top zipline adventure.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Wahoo+Zipline+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?ATV,offroad,mountain trail" alt="Bluff Mountain Adventures photo" loading="lazy">
+      <div class="body">
+        <h3>Bluff Mountain Adventures</h3>
+        
+        <p>Guided ATV rides on mountain trails.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Bluff+Mountain+Adventures+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?river tubing,summer,smokies" alt="Wild Bear Tubing photo" loading="lazy">
+      <div class="body">
+        <h3>Wild Bear Tubing</h3>
+        
+        <p>Relaxing float on the river—seasonal fun.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Wild+Bear+Tubing+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div></section>
+    <section id='shopping'><h1>Area Shopping</h1><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?outdoor store,knife,gear" alt="Smoky Mountain Knifeworks photo" loading="lazy">
+      <div class="body">
+        <h3>Smoky Mountain Knifeworks</h3>
+        
+        <p>Massive knife & outdoor megastore—easy to get lost.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Smoky+Mountain+Knifeworks+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?village shops,gatlinburg,alley" alt="The Village Shops (Gatlinburg) photo" loading="lazy">
+      <div class="body">
+        <h3>The Village Shops (Gatlinburg)</h3>
+        
+        <p>Old‑world alleys; don’t miss The Donut Friar.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Village+Shops+(Gatlinburg)+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?shopping,boardwalk,ferris wheel" alt="The Island photo" loading="lazy">
+      <div class="body">
+        <h3>The Island</h3>
+        
+        <p>Boutiques, sweets, rides—stroll and browse.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Island+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?outlet mall,shopping,sevierville" alt="Tanger Outlets‑Sevierville photo" loading="lazy">
+      <div class="body">
+        <h3>Tanger Outlets‑Sevierville</h3>
+        
+        <p>Brand‑name deals across dozens of stores.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Tanger+Outlets‑Sevierville+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?old mill,pottery,shopping" alt="The Old Mill District photo" loading="lazy">
+      <div class="body">
+        <h3>The Old Mill District</h3>
+        
+        <p>Historic mill, pottery, and Southern pantry goods.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Old+Mill+District+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?pottery,artisan,handmade" alt="Alewine Pottery photo" loading="lazy">
+      <div class="body">
+        <h3>Alewine Pottery</h3>
+        
+        <p>Hand‑thrown pottery—Smokies staple.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Alewine+Pottery+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div></section>
+    <section id='moonshine'><h1>Best Moonshine Tasting</h1><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?moonshine,distillery,tasting" alt="Sugarlands photo" loading="lazy">
+      <div class="body">
+        <h3>Sugarlands</h3>
+        
+        <p>Popular tastings, live music, and creative cocktails.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Sugarlands+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?distillery,old mill,whiskey" alt="Old Forge Distillery photo" loading="lazy">
+      <div class="body">
+        <h3>Old Forge Distillery</h3>
+        
+        <p>Craft spirits tucked in Old Mill Square.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Old+Forge+Distillery+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?moonshine,tasting,gatlinburg" alt="Ole Smoky photo" loading="lazy">
+      <div class="body">
+        <h3>Ole Smoky</h3>
+        
+        <p>The OG moonshine tasting experience.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Ole+Smoky+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?distillery,whiskey,small batch" alt="Kings Family Distillery photo" loading="lazy">
+      <div class="body">
+        <h3>Kings Family Distillery</h3>
+        
+        <p>Small‑batch spirits with knowledgeable staff.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Kings+Family+Distillery+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?moonshine,tasting,tennessee" alt="Tennessee Shine Company photo" loading="lazy">
+      <div class="body">
+        <h3>Tennessee Shine Company</h3>
+        
+        <p>Flavors for every palate and friendly tastings.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Tennessee+Shine+Company+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div></section>
+    <section id='outdoors'><h1>Best Outdoor Spots</h1><div class='grid'>
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?clingmans dome,smoky mountains,overlook" alt="Kuwohi (Clingmans Dome) photo" loading="lazy">
+      <div class="body">
+        <h3>Kuwohi (Clingmans Dome)</h3>
+        
+        <p>Highest point in the park—boardwalk tower views.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Kuwohi+(Clingmans+Dome)+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?roaring fork,scenic drive,forest" alt="Roaring Forks nature trail photo" loading="lazy">
+      <div class="body">
+        <h3>Roaring Forks nature trail</h3>
+        
+        <p>One‑way scenic loop through forest & cabins.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Roaring+Forks+nature+trail+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?cades cove,wildlife,meadow" alt="Cades Cove photo" loading="lazy">
+      <div class="body">
+        <h3>Cades Cove</h3>
+        
+        <p>11‑mile loop—wildlife, cabins, open meadows.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Cades+Cove+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?alum cave,trail,forest" alt="Alum Cave Trail photo" loading="lazy">
+      <div class="body">
+        <h3>Alum Cave Trail</h3>
+        
+        <p>Signature hike past Arch Rock to Alum Bluffs.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Alum+Cave+Trail+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?rainbow falls,waterfall,hike" alt="Rainbow Falls Trail photo" loading="lazy">
+      <div class="body">
+        <h3>Rainbow Falls Trail</h3>
+        
+        <p>Moderate climb with a waterfall reward.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Rainbow+Falls+Trail+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?foothills parkway,scenic drive,overlook" alt="Foothills parkway photo" loading="lazy">
+      <div class="body">
+        <h3>Foothills parkway</h3>
+        
+        <p>Serpentine byway with sweeping overlooks.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Foothills+parkway+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?chimney tops,mountain,trail" alt="Chimney Tops photo" loading="lazy">
+      <div class="body">
+        <h3>Chimney Tops</h3>
+        
+        <p>Short, steep, and stunning—experience required.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Chimney+Tops+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?andrews bald,meadow,overlook" alt="Andrew’s Bald photo" loading="lazy">
+      <div class="body">
+        <h3>Andrew’s Bald</h3>
+        
+        <p>Family‑friendly bald with wide‑open views.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Andrew’s+Bald+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?grotto falls,waterfall,hike" alt="Grotto Falls photo" loading="lazy">
+      <div class="body">
+        <h3>Grotto Falls</h3>
+        
+        <p>Walk behind the waterfall—kid‑friendly favorite.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Grotto+Falls+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <img src="https://source.unsplash.com/640x420/?abrams falls,waterfall,smokies" alt="Abram’s Falls photo" loading="lazy">
+      <div class="body">
+        <h3>Abram’s Falls</h3>
+        
+        <p>Powerful falls via Cades Cove—heed currents.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Abram’s+Falls+Tennessee" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </article>
+    </div></section>
+  </main>
+  <footer class="container">
+    Built with ❤️ by Andrew • Save to your phone’s Home Screen for quick access.
+  </footer>
+<script>
+// Allow Andrew to set Venmo via URL hash: #venmo=YourHandle
+(function(){
+  try {
+    const hash = decodeURIComponent(location.hash.replace('#',''));
+    if(hash && hash.startsWith('venmo=')) {
+      const user = hash.split('=')[1];
+      const link = document.getElementById('venmoLink');
+      if(user && link) link.href = 'https://venmo.com/u/' + user;
+    }
+  } catch(e){}
+})();
+</script>
+</body>
+</html>
